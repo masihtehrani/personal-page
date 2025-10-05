@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   distDir: 'out',
   basePath: process.env.NODE_ENV === 'production' ? '/personal-page' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-page' : '',
-  experimental: {
-    esmExternals: false,
-  },
 }
 
 export default nextConfig
