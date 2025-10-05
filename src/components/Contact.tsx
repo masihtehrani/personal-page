@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Phone, Mail, Linkedin, Github, MapPin, Clock } from 'lucide-react'
+import { Phone, Mail, Linkedin, Github, Clock } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -54,7 +54,6 @@ const Contact = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   }
@@ -79,7 +78,7 @@ const Contact = () => {
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Let's discuss your next project
+            Let&apos;s discuss your next project
           </motion.p>
         </motion.div>
 
@@ -92,7 +91,7 @@ const Contact = () => {
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
-            {contactInfo.map((contact, index) => (
+            {contactInfo.map((contact) => (
               <motion.a
                 key={contact.title}
                 href={contact.href}
@@ -138,8 +137,8 @@ const Contact = () => {
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-4">Ready to work together?</h3>
               <p className="text-blue-100 mb-8 leading-relaxed">
-                I'm always interested in new opportunities and challenging projects. 
-                Let's connect and discuss how we can build something amazing together.
+                I&apos;m always interested in new opportunities and challenging projects. 
+                Let&apos;s connect and discuss how we can build something amazing together.
               </p>
               
               <div className="space-y-4">

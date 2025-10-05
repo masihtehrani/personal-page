@@ -22,7 +22,6 @@ const Hero = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   }
@@ -116,7 +115,7 @@ const Hero = () => {
               variants={itemVariants}
               className="flex space-x-4"
             >
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.label}
                   href={link.href}

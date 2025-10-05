@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Calendar, MapPin, Building } from 'lucide-react'
+import { Calendar, Building } from 'lucide-react'
 
 const Experience = () => {
   const ref = useRef(null)
@@ -44,7 +44,6 @@ const Experience = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   }
