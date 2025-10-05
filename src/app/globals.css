@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Courier New', monospace;
+  }
+  
+  body {
+    background-color: #000000;
+    color: #00ff00;
+    overflow-x: hidden;
+  }
+  
+  ::selection {
+    background-color: #00ff00;
+    color: #000000;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

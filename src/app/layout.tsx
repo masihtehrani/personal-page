@@ -1,30 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-import StructuredData from '@/components/StructuredData'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Mahmoud Masih Tehrani - Principal Blockchain & Go Developer',
-    template: '%s | Mahmoud Masih Tehrani'
-  },
+  title: 'Mahmoud Masih Tehrani - Principal Software Engineer',
   description: 'Principal Software Engineer specializing in Blockchain, FinTech, and Go development. 12+ years of experience in scalable microservice systems and distributed engineering teams.',
   keywords: [
-    'Mahmoud Tehrani',
+    'Mahmoud Masih Tehrani',
+    'Principal Software Engineer',
     'Blockchain Developer',
     'Go Developer',
-    'Principal Software Engineer',
     'FinTech',
     'Microservices',
     'Distributed Systems',
     'Technical Leadership',
     'Golang',
     'Solidity',
-    'Cryptocurrency',
-    'IoT',
-    'GIS'
+    'Smart Contracts',
+    'Software Architecture'
   ],
   authors: [{ name: 'Mahmoud Masih Tehrani' }],
   creator: 'Mahmoud Masih Tehrani',
@@ -42,23 +34,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://masihtehrani.ir',
-    title: 'Mahmoud Masih Tehrani - Principal Blockchain & Go Developer',
+    title: 'Mahmoud Masih Tehrani - Principal Software Engineer',
     description: 'Principal Software Engineer specializing in Blockchain, FinTech, and Go development. 12+ years of experience in scalable microservice systems and distributed engineering teams.',
     siteName: 'Mahmoud Masih Tehrani',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Mahmoud Masih Tehrani - Principal Blockchain & Go Developer',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Mahmoud Masih Tehrani - Principal Blockchain & Go Developer',
+    card: 'summary',
+    title: 'Mahmoud Masih Tehrani - Principal Software Engineer',
     description: 'Principal Software Engineer specializing in Blockchain, FinTech, and Go development. 12+ years of experience in scalable microservice systems and distributed engineering teams.',
-    images: ['/og-image.jpg'],
     creator: '@masihtehrani',
   },
   robots: {
@@ -71,9 +54,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 }
 
@@ -93,8 +73,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        <StructuredData />
+      <body className="font-mono antialiased">
         {children}
       </body>
     </html>
