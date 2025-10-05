@@ -63,7 +63,7 @@ export default function Footer() {
                   href="mailto:mahmud.tehrani@gmail.com" 
                   className="block text-gray-300 hover:text-white transition-colors"
                 >
-                  mahmud.tehrani@gmail.com
+                  mahmud.tehrani[at]gmail.com
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/mahmoudmasihtehrani/" 

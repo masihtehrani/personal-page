@@ -15,9 +15,11 @@ export default function Experience() {
         'Led a team of 8+ engineers in developing blockchain solutions',
         'Architected microservices serving 1M+ users with 99.9% uptime',
         'Implemented Go-based trading systems with sub-millisecond latency',
-        'Established CI/CD pipelines reducing deployment time by 80%'
+        'Established CI/CD pipelines reducing deployment time by 80%',
+        'Designed smart contracts handling $100M+ in transactions',
+        'Built distributed systems with 99.99% availability'
       ],
-      technologies: ['Go', 'Solidity', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis']
+      technologies: ['Go', 'Solidity', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis', 'Ethereum', 'Web3']
     },
     {
       title: 'Senior Software Engineer',
@@ -29,9 +31,11 @@ export default function Experience() {
         'Developed smart contracts handling $50M+ in transactions',
         'Built RESTful APIs with Go achieving 10,000+ RPS',
         'Optimized database performance resulting in 300% improvement',
-        'Implemented security protocols for financial data protection'
+        'Implemented security protocols for financial data protection',
+        'Created microservices architecture for payment processing',
+        'Led migration from monolithic to microservices architecture'
       ],
-      technologies: ['Go', 'Solidity', 'PHP', 'PostgreSQL', 'Redis', 'Docker']
+      technologies: ['Go', 'Solidity', 'PHP', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'AWS']
     },
     {
       title: 'Software Engineer',
@@ -43,9 +47,26 @@ export default function Experience() {
         'Developed full-stack applications using PHP and Python',
         'Integrated IoT devices with cloud-based systems',
         'Built GIS applications for location-based services',
-        'Mentored junior developers and improved team productivity'
+        'Mentored junior developers and improved team productivity',
+        'Implemented real-time data processing systems',
+        'Created automated testing frameworks'
       ],
-      technologies: ['PHP', 'Python', 'JavaScript', 'MySQL', 'Linux', 'Git']
+      technologies: ['PHP', 'Python', 'JavaScript', 'MySQL', 'Linux', 'Git', 'Docker', 'Redis']
+    },
+    {
+      title: 'Junior Software Developer',
+      company: 'StartupTech',
+      location: 'Tehran, Iran',
+      period: '2010 - 2012',
+      description: 'Started career in software development with focus on web applications and database design.',
+      achievements: [
+        'Developed web applications using PHP and MySQL',
+        'Designed and implemented database schemas',
+        'Collaborated with cross-functional teams',
+        'Learned agile development methodologies',
+        'Contributed to open-source projects'
+      ],
+      technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Linux', 'Git']
     }
   ]
 

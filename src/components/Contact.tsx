@@ -8,7 +8,7 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'mahmud.tehrani@gmail.com',
+      value: 'mahmud.tehrani[at]gmail.com',
       href: 'mailto:mahmud.tehrani@gmail.com'
     },
     {
