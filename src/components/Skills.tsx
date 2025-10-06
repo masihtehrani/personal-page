@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Code, Database, Cloud, Shield, Zap, Users, ChevronDown, ChevronUp } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Skills() {
   const [expandedSkill, setExpandedSkill] = useState<string | null>(null)

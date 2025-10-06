@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Github, Phone, MapPin, Clock, Eye, EyeOff } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ContactForm from './ContactForm'
+import ClientOnly from './ClientOnly'
 
 export default function Contact() {
   const [revealedContacts, setRevealedContacts] = useState<Set<string>>(new Set())
@@ -145,7 +146,9 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            <ContactForm />
+            <ClientOnly>
+              <ContactForm />
+            </ClientOnly>
           </div>
 
           <motion.div

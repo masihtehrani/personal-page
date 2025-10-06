@@ -5,6 +5,7 @@ import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import ClientOnly from '@/components/ClientOnly'
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       <Hero />
       <About />
       <Experience />
-      <Skills />
+      <ClientOnly>
+        <Skills />
+      </ClientOnly>
       <Contact />
       <Footer />
     </main>
