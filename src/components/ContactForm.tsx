@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Send, CheckCircle } from 'lucide-react'
 import { useState } from 'react'
-import { RateLimiter, isValidEmail, createEmailLink, isBot } from '@/utils/spamProtection'
+import { RateLimiter, isValidEmail, createEmailLink, isBot } from '../utils/spamProtection'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
