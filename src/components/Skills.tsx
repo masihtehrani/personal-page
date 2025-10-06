@@ -1,9 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Database, Cloud, Shield, Zap, Users } from 'lucide-react'
+import { Code, Database, Cloud, Shield, Zap, Users, ChevronDown, ChevronUp } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Skills() {
+  const [expandedSkill, setExpandedSkill] = useState<string | null>(null)
+
   const skillCategories = [
     {
       icon: Code,
@@ -101,7 +104,7 @@ export default function Skills() {
                   <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
@@ -109,10 +112,15 @@ export default function Skills() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: skillIndex * 0.1 }}
                       viewport={{ once: true }}
+                      className="cursor-pointer"
+                      onClick={() => setExpandedSkill(expandedSkill === skill.name ? null : skill.name)}
                     >
-                      <div className="flex justify-between items-center mb-2">
+                      <div className="flex justify-between items-center mb-2 p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <span className="font-semibold text-gray-900">{skill.name}</span>
-                        <span className="text-sm text-gray-600">{skill.level}%</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-gray-600">{skill.level}%</span>
+                          {expandedSkill === skill.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                        </div>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <motion.div
@@ -123,7 +131,14 @@ export default function Skills() {
                           className="bg-blue-600 h-2 rounded-full"
                         />
                       </div>
-                      <p className="text-sm text-gray-600 mt-1">{skill.description}</p>
+                      <motion.div
+                        initial={false}
+                        animate={{ height: expandedSkill === skill.name ? 'auto' : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-sm text-gray-600 mt-2 p-2 bg-blue-50 rounded">{skill.description}</p>
+                      </motion.div>
                     </motion.div>
                   ))}
                 </div>

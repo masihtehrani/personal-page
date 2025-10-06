@@ -22,12 +22,13 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Mahmoud Masih Tehrani
             </h1>
-            <h2 className="text-2xl md:text-3xl text-blue-600 mb-4 font-semibold">
-              Principal Software Engineer
-            </h2>
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl text-gray-700 font-medium block mb-2">Principal Software Engineer</span>
+              <span className="text-xl md:text-2xl text-blue-600 font-semibold">Blockchain & FinTech Solutions</span>
+            </div>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Specializing in Blockchain, FinTech, and Go development with 12+ years of experience 
-              in building scalable microservice systems and leading distributed engineering teams.
+              Expert in distributed systems architecture, smart contract development, and technical leadership. 
+              12+ years building enterprise-grade blockchain solutions and leading engineering teams.
             </p>
           </motion.div>
 

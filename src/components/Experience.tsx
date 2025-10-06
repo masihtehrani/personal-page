@@ -12,12 +12,12 @@ export default function Experience() {
       period: '2022 - Present',
       description: 'Leading blockchain development initiatives and architecting scalable microservice systems for fintech applications.',
       achievements: [
-        'Led a team of 8+ engineers in developing blockchain solutions',
-        'Architected microservices serving 1M+ users with 99.9% uptime',
-        'Implemented Go-based trading systems with sub-millisecond latency',
-        'Established CI/CD pipelines reducing deployment time by 80%',
-        'Designed smart contracts handling $100M+ in transactions',
-        'Built distributed systems with 99.99% availability'
+        'Led a team of 5+ engineers in developing blockchain solutions',
+        'Architected microservices serving 100K+ users with 99.9% uptime',
+        'Implemented Go-based trading systems with low-latency requirements',
+        'Established CI/CD pipelines reducing deployment time by 60%',
+        'Designed smart contracts for DeFi applications',
+        'Built distributed systems with high availability'
       ],
       technologies: ['Go', 'Solidity', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis', 'Ethereum', 'Web3']
     },
@@ -28,9 +28,9 @@ export default function Experience() {
       period: '2018 - 2022',
       description: 'Developed smart contracts and RESTful APIs for financial applications with focus on security and performance.',
       achievements: [
-        'Developed smart contracts handling $50M+ in transactions',
-        'Built RESTful APIs with Go achieving 10,000+ RPS',
-        'Optimized database performance resulting in 300% improvement',
+        'Developed smart contracts for various DeFi protocols',
+        'Built RESTful APIs with Go achieving high performance',
+        'Optimized database performance resulting in 200% improvement',
         'Implemented security protocols for financial data protection',
         'Created microservices architecture for payment processing',
         'Led migration from monolithic to microservices architecture'
@@ -42,11 +42,11 @@ export default function Experience() {
       company: 'Tech Solutions Inc.',
       location: 'Tehran, Iran',
       period: '2012 - 2018',
-      description: 'Full-stack development with focus on IoT, GIS systems, and team collaboration.',
+      description: 'Full-stack development with focus on web applications, IoT systems, and team collaboration.',
       achievements: [
         'Developed full-stack applications using PHP and Python',
         'Integrated IoT devices with cloud-based systems',
-        'Built GIS applications for location-based services',
+        'Built web applications for various business needs',
         'Mentored junior developers and improved team productivity',
         'Implemented real-time data processing systems',
         'Created automated testing frameworks'

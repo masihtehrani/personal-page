@@ -24,8 +24,8 @@ export default function About() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A passionate Principal Software Engineer with extensive experience in blockchain technology, 
-              fintech solutions, and distributed systems architecture.
+              A seasoned Principal Software Engineer specializing in blockchain technology, 
+              smart contract development, and distributed systems architecture with 12+ years of experience.
             </p>
           </motion.div>
 
@@ -40,14 +40,14 @@ export default function About() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 With over 12 years of experience in software development, I have specialized in building 
                 scalable blockchain solutions and fintech applications. My expertise spans across Go, 
-                Solidity, and microservices architecture, with a strong focus on team leadership and 
-                technical innovation.
+                Solidity, and microservices architecture, with a strong focus on technical leadership and 
+                system design.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                I have successfully led engineering teams of 8+ developers, architected systems serving 
-                over 1 million users, and implemented cutting-edge blockchain solutions for various 
+                I have successfully led engineering teams of 5+ developers, architected systems serving 
+                over 100K users, and implemented cutting-edge blockchain solutions for various 
                 fintech companies. My passion lies in creating robust, scalable systems that drive 
-                business growth.
+                business growth and innovation.
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
