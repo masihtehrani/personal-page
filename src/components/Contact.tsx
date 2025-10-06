@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Github, Phone, MapPin, Clock, Eye, EyeOff } from 'lucide-react'
 import { useState } from 'react'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
   const [revealedContacts, setRevealedContacts] = useState<Set<string>>(new Set())
@@ -23,9 +24,10 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'mahmud.tehrani[at]gmail.com',
-      href: 'mailto:mahmud.tehrani@gmail.com',
-      obfuscated: true
+      value: 'Click to reveal email',
+      href: '#',
+      obfuscated: true,
+      realValue: 'mahmud.tehrani@gmail.com'
     },
     {
       icon: Linkedin,
@@ -44,9 +46,10 @@ export default function Contact() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+98-919-***-****',
-      href: 'tel:+989195526104',
-      obfuscated: true
+      value: 'Click to reveal phone',
+      href: '#',
+      obfuscated: true,
+      realValue: '+98-919-552-6104'
     },
     {
       icon: MapPin,
@@ -107,14 +110,20 @@ export default function Contact() {
                         {info.obfuscated && !revealedContacts.has(info.label) 
                           ? info.value 
                           : info.obfuscated 
-                            ? (info.label === 'Email' ? 'mahmud.tehrani@gmail.com' : '+98-919-552-6104')
+                            ? info.realValue
                             : info.value
                         }
                       </div>
                     </div>
                     {info.obfuscated && (
                       <button
-                        onClick={() => toggleReveal(info.label)}
+                        onClick={() => {
+                          toggleReveal(info.label)
+                          if (revealedContacts.has(info.label)) {
+                            // Copy to clipboard when revealed
+                            navigator.clipboard.writeText(info.realValue || '')
+                          }
+                        }}
                         className="ml-2 p-1 text-gray-500 hover:text-blue-600 transition-colors"
                         title={revealedContacts.has(info.label) ? 'Hide contact info' : 'Reveal contact info'}
                       >
@@ -136,44 +145,7 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg p-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let&apos;s Work Together</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                I&apos;m passionate about building innovative solutions and leading technical teams. 
-                Whether you need a blockchain expert, a Go specialist, or a technical leader, 
-                I&apos;m here to help bring your vision to life.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                  <span className="text-gray-600">Available for new opportunities</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                  <span className="text-gray-600">Open to remote work</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-                  <span className="text-gray-600">Interested in blockchain projects</span>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <a
-                  href="mailto:mahmud.tehrani@gmail.com"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-block"
-                >
-                  Send Email
-                </a>
-              </div>
-            </motion.div>
+            <ContactForm />
           </div>
 
           <motion.div

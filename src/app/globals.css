@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Spam protection styles */
+.email-obfuscated {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.phone-obfuscated {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+/* Hide email from screen readers when obfuscated */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Anti-bot protection */
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 @layer base {
   * {
     margin: 0;
